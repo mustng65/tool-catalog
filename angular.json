@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.yml",
+              "src/Staticfile",
+              "src/config/appsettings.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -118,6 +121,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tool-catalog"
 }

@@ -1,15 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './common/navbar/navbar.component';
+import { MaterialComponentsModule } from './core/material-components.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MaterialComponentsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavbarComponent
       ],
     }).compileComponents();
   }));
@@ -26,10 +30,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('tool-catalog');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render a app-navbar tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to tool-catalog!');
+    expect(compiled.querySelector('app-navbar').textContent).toBeTruthy();
   });
 });
