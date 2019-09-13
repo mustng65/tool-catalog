@@ -47,3 +47,4 @@ Thumbs.db
 
 # Jest Junit
 /testResults
+junit.xml
